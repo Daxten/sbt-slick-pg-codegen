@@ -23,7 +23,7 @@ object CodegenPlugin extends AutoPlugin {
     val jsonType        = settingKey[String]("")
     val geometryType    = settingKey[String]("")
 
-    lazy val defaultSettings: Seq[Def.Setting[_]] = Seq(
+    lazy val defaultSlickCodegenSettings: Seq[Def.Setting[_]] = Seq(
       slickConfig     := "server/conf/application.conf",
       migrationPrefix := "server/conf/db/migration",
       schemaFolder    := "dbschema/src/main/scala",
@@ -44,7 +44,7 @@ object CodegenPlugin extends AutoPlugin {
   import autoImport._
 
   override lazy val projectSettings: Seq[Def.Setting[_]] =
-    inConfig(Default)(defaultSettings) ++
+    inConfig(Default)(defaultSlickCodegenSettings) ++
       Seq(commands += codegenCommand.value)
 
   lazy val codegenCommand = Def.setting {
