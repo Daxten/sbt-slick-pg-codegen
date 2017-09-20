@@ -13,7 +13,8 @@ class CustomizedCodeGenerator(val model: m.Model,
                               timestamptzType: String,
                               timestampType: String,
                               jsonType: String,
-                              geometryType: String)
+                              geometryType: String,
+                              modelsPackage: String)
     extends SourceCodeGenerator(model) {
   override val ddlEnabled = false
 
@@ -105,9 +106,7 @@ class CustomizedCodeGenerator(val model: m.Model,
        |package $pkg
        |
        |import $driver
-       |import java.time._
-       |import io.circe._
-       |import shared.models.slick.${ExtString(container).toCamelCase}._
+       |import $modelsPackage.${ExtString(container).toCamelCase}._
        |
        |object $container extends {
        |  val profile = $driver

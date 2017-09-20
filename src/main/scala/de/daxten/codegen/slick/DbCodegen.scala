@@ -105,7 +105,8 @@ object DbCodegen {
                                         timestamptzType,
                                         timestampType,
                                         jsonType,
-                                        geometryType)
+                                        geometryType,
+                                        modelsPackage)
           }
 
       schemaFolder.toFile.createDirectories()
