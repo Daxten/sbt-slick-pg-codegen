@@ -1,14 +1,9 @@
 sbtPlugin := true
 
 name := """sbt-slick-pg-codegen"""
-
 organization := "de.daxten"
-
-version := "0.1"
-
 scalaVersion := "2.12.3"
-
-bintrayRepository := "maven"
+version := "0.1"
 
 val slick         = "3.2.1" // http://slick.lightbend.com/
 val slickPg       = "0.15.3" // https://github.com/tminglei/slick-pg
@@ -31,23 +26,5 @@ libraryDependencies ++= Seq(
 )
 
 publishArtifact in Test := false
-
-pomExtra :=
-  <url>https://github.com/Daxten/sbt-slick-pg-codegen</url>
-    <licenses>
-      <license>
-        <name>MIT license</name>
-        <url>http://www.opensource.org/licenses/mit-license.php</url>
-      </license>
-    </licenses>
-    <scm>
-      <url>git://github.com/Daxten/sbt-slick-pg-codegen.git</url>
-      <connection>scm:git://github.com/Daxten/sbt-slick-pg-codegen.git</connection>
-    </scm>
-    <developers>
-      <developer>
-        <id>daxten</id>
-        <name>Alexej Haak</name>
-        <url>https://github.com/Daxten</url>
-      </developer>
-    </developers>
+bintrayRepository := "maven"
+publishMavenStyle := true
