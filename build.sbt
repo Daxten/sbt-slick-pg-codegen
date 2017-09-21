@@ -20,8 +20,7 @@ libraryDependencies ++= Seq(
   "com.geirsson"         %% "scalafmt-core"       % scalaFmt,
   "com.github.pathikrit" %% "better-files"        % betterFiles,
   "org.postgresql"       % "postgresql"           % postgres,
-  "org.flywaydb"         % "flyway-core"          % flyway,
-  "io.swagger"           % "swagger-parser"       % swaggerParser
+  "org.flywaydb"         % "flyway-core"          % flyway
 )
 
 publishArtifact in Test := false
