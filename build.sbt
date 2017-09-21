@@ -1,14 +1,9 @@
 sbtPlugin := true
 
 name := """sbt-slick-pg-codegen"""
-
 organization := "de.daxten"
-
-version := "0.2-SNAPSHOT"
-
 scalaVersion := "2.12.3"
-
-bintrayRepository := "maven"
+version := "0.2-SNAPSHOT"
 
 val slick         = "3.2.1" // http://slick.lightbend.com/
 val slickPg       = "0.15.3" // https://github.com/tminglei/slick-pg
@@ -31,3 +26,5 @@ libraryDependencies ++= Seq(
 )
 
 publishArtifact in Test := false
+bintrayRepository := "maven"
+publishMavenStyle := true
