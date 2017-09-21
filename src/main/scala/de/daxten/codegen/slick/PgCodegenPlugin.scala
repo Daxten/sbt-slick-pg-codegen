@@ -3,7 +3,7 @@ package de.daxten.codegen.slick
 import sbt.Keys._
 import sbt.{Def, _}
 
-object CodegenPlugin extends AutoPlugin {
+object PgCodegenPlugin extends AutoPlugin {
 
   object autoImport {
     val slickConfig     = settingKey[String]("")
