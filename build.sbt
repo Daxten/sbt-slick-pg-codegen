@@ -16,7 +16,6 @@ val postgres      = "42.1.4"
 
 libraryDependencies ++= Seq(
   "com.typesafe.slick"   %% "slick-codegen"       % slick,
-  "com.typesafe.slick"   %% "slick-codegen"       % slick,
   "org.scalameta"        %% "scalameta"           % scalaMeta,
   "com.geirsson"         %% "scalafmt-core"       % scalaFmt,
   "com.github.pathikrit" %% "better-files"        % betterFiles,
