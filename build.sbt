@@ -4,9 +4,11 @@ name := """sbt-slick-pg-codegen"""
 
 organization := "de.daxten"
 
-version := "0.1-SNAPSHOT"
+version := "0.1"
 
 scalaVersion := "2.12.3"
+
+bintrayRepository := "maven"
 
 val slick         = "3.2.1" // http://slick.lightbend.com/
 val slickPg       = "0.15.3" // https://github.com/tminglei/slick-pg
