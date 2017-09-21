@@ -7,6 +7,7 @@ import slick.{model => m}
 
 class CustomizedCodeGenerator(val model: m.Model,
                               driver: String,
+                              modelPackage: String,
                               sqlTimeType: String,
                               sqlDateType: String,
                               intervalType: String,
@@ -105,9 +106,7 @@ class CustomizedCodeGenerator(val model: m.Model,
        |package $pkg
        |
        |import $driver
-       |import java.time._
-       |import io.circe._
-       |import shared.models.slick.${ExtString(container).toCamelCase}._
+       |import $modelPackage.${ExtString(container).toCamelCase}._
        |
        |object $container extends {
        |  val profile = $driver

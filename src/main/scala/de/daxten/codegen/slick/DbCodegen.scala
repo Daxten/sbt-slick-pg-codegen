@@ -99,6 +99,7 @@ object DbCodegen {
           .map { model =>
             new CustomizedCodeGenerator(model,
                                         driver,
+                                        modelsPackage,
                                         sqlTimeType,
                                         sqlDateType,
                                         intervalType,
